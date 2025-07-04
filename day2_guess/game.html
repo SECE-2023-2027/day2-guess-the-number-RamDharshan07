@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   body{
+    color: white;
+    background-color: black;
+    margin-top: 2rem;
+   }
+   .top{
+    background-color: white;
+    color: black;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 25px;
+
+   }
+   .h1{
+    display:flex ;
+    justify-content: center;
+    margin-bottom:10px ;
+
+   }
+   input{
+    background-color: black;
+    
+    border:0.1rem solid aliceblue;
+     width: 100px;
+     height: 50px;
+     margin-right: 2px;
+     color: white;
+   }
+   .left{
+    display: flex;
+    flex-direction: column;
+    margin-right:14rem;
+   }
+   button{
+    width: 50px;
+    padding: 5px;
+    padding-left: 3px;
+
+    margin-left: 30px;
+    margin-top: 10px;
+    padding-right: 12px;
+    background-color: white;
+    font-size: medium;
+     
+   }
+   .main{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+   }
+   .box{
+    position: absolute;
+    text-align: center;
+    border-bottom: 2x;
+    border-color: aliceblue;
+    text-align: center;
+   }
+   .que{
+    position: relative;
+    background-color: white;
+     padding: 30px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     bottom: 30px;
+     left:45rem;
+     color: black;
+     font-size: 4rem;
+   }
+   .cent{
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 55px;
+   }
+   
+    </style>
+</head>
+<body>
+    <div class="">
+        <span class="top">Again</span>
+    </div>
+    <div class="cent">
+    <h1 class="h1">
+    Guess My Number
+    </h1>
+</div>
+    <div>
+        <div class="box">
+          <span class="que">?</span>
+            
+        </div>
+        <hr/>
+
+    </div>
+    <div class="main">
+<div class="left">
+        <input type="number" class="input"/>
+        
+        <button class="number">check</button>
+    </div>
+    <div class="right">
+        <p class="guess">start Guessing....</p>
+        <p class="score">score :</p>
+        <p class="hisc">High Score :</p>
+    </div>
+    </div>
+    <script>
+        const secretNumberEl = document.querySelector('.que');
+        const inputEl = document.querySelector('.input');
+        const checkBtn = document.querySelector('.check');
+        
+        checkBtn.addEventListener('click', function() {
+            const number = inputEl.value;
+            if (number) {
+                secretNumberEl.textContent = number;
+            } else {
+                secretNumberEl.textContent = "?";
+            }
+        });
+    </script>
+</body>
+</html>
